@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: sans-serif;
+    color: black;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.sidebar{
+position: fixed;
+top: 0;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 270px;
+height: 100%;
+padding: 15px 10px 30px 20px;
+background-color: rgb(255, 194, 10);
+}
+
+
+
+.sidebar button {
+    height: 60px;
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    color: black;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.3s;
+}
+
+.sidebar button:hover > span{
+    background-color: rgb(201, 154, 15);
+}
+
+.sidebar button i{
+    position: relative;
+    font-size: 35px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 16px;
+}
+
+/* Estilos para o novo elemento no centro da página */
+.nav-pay {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; 
+    background-color: rgb(255, 194, 10);; /* Define a cor de fundo como amarelo com 50% de opacidade */
+    border-radius: 24px; /* Define o raio da borda para criar cantos arredondados */
+    padding: 0 16px; /* Adiciona algum preenchimento interno para o conteúdo */
+    height: 70px; /* Define a altura */
+    display: inline-flex; /* Exibe os elementos como flexíveis */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap:5px; /* Espaço entre os itens */
+    line-height: 1; /* Altura da linha */
+    transition: all 0.5s; /* Transição suave */
+    font-size: 20px; /* Define o tamanho do texto */
+}
+
+.nav-pay:hover {
+    background-color: rgb(173, 137, 16); /* Altera a cor de fundo para um amarelo mais forte no hover */
+}
+
+.nav-pay i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.exit-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 12px;
+    border: 1px solid #333333;
+    border-radius: 7px;
+    gap: 5px;
+}
+
+.exit-button:hover {
+    background-color: #e7aa01;
+    color: #ffffff;
+}
+
+
+
+

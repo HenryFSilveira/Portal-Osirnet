@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Página Inicial</title>
+</head>
+<body>
+    
+<aside class="sidebar">
+    <img src="./osirnet.svg" alt="Osirnet">
+<header class="sidebar-header">
+    <h1>Bem vindo, NomedoUsuário!</h1>
+</header>
+
+<nav>
+    <button>
+        <span>
+            <i class="ri-home-wifi-line"></i>
+            <span>Página inicial</span>
+        </span>
+    </button>
+
+    <button>
+        <span>
+            <i class="ri-barcode-line"></i>
+            <span>Fatura</span>
+        </span>
+    </button>
+
+    <button>
+        <span>
+            <i class="ri-file-list-3-line"></i>
+            <span>Notas fiscais</span>
+        </span>
+    </button>
+
+    <button>
+        <span>
+            <i class="ri-settings-3-line"></i>
+            <span>Configurações</span>
+        </span>
+    </button>
+</nav>
+
+</aside>
+
+<div class="nav-pay">
+    <i class="ri-wallet-line"></i>
+    <span>Alterar forma de pagamento</span>
+</div>
+
+<a href="#" class="exit-button">
+    <i class="ri-arrow-go-back-line"></i>
+    <span>Sair</span>
+</a>
+
+<script>
+    document.querySelector('.exit-button').addEventListener('click', function() {
+        history.back();
+    });
+</script>
+
+</body>
+</html>

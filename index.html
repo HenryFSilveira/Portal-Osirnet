@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Login Portal</title>
+    <style>
+        /* Estilo para manter o campo de entrada visível */
+        #cpfInput {
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça o login<br>E acesse o portal Osirnet</h1> 
+            <img src="internet-day-animate.svg" class="left-login-image" alt="Osirnet">
+        </div>
+        <div class="right-login">
+            <img src="osirnet.svg" class="card-osirnet" alt="Osirnet">
+            <div class="card-login">
+                <h1>Acesse sua conta</h1>
+                <br>
+                <div class="textfield">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" id="cpfInput" placeholder="CPF ou CNPJ">
+                </div>
+                <div class="textfield">
+                    <label for="senha"></label>
+                    <br>
+                    <input type="password" name="Senha" placeholder="Digite sua senha">
+                </div>
+
+                <button class="btn-login" id="loginBtn">Fazer login</button>
+                <div class="options">
+                    <div class="options">
+                        <a href="#">Primeiro Acesso</a>
+                        <span class="divider">|</span> 
+                        <a href="#">Esqueci a Senha</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusão do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script para aplicar a máscara de CPF ou CNPJ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#cpfInput').inputmask({
+                mask: ['999.999.999-99', '99.999.999/9999-99'],
+                greedy: false,
+                definitions: {
+                    '9': {
+                        validator: "[0-9]",
+                        cardinality: 1
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Script para redirecionar para o arquivo HTML local -->
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            window.location.href = "file:///home/Osirnet-Cindy/Documentos/Arquivos%20Henrique/Portal%20Osirnet/index2.html";
+        });
+    </script>
+</body>
+</html>
